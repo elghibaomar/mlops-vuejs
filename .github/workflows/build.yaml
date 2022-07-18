@@ -22,12 +22,11 @@ jobs:
         run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile \
-            -t elghibaomar/vuejs-k8s-web:latest \
-            -t elghibaomar/vuejs-k8s-web:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
-            .
+        run: docker build . --file Dockerfile --tag elghibaomar/vuejs-k8s-web:latest 
+          
+      
       - name: Docker Push
-        run: docker push elghibaomar/vuejs-k8s-web --all-tags
+        run: docker push elghibaomar/vuejs-k8s-web:latest
 
 
 
