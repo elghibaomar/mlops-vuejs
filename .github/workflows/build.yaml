@@ -37,7 +37,7 @@ jobs:
 
       - name: Deployment image
         run: |
-          kubectl apply -f k8s/apps/django-k8s-web.yaml  
+          kubectl apply -f k8s/apps/vuejs-k8s-web.yaml  
       - name: Update Deployment image
         run: |
           kubectl set image deployment/vuejs-k8s-web-deployment vuejs-k8s-web=registry.digitalocean.com/om-k8s/vuejs-k8s-web:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
