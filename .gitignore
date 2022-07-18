@@ -5,6 +5,7 @@ web/.env
 web/.env.prod
 .vscode
 node_modules
+node_modules/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
