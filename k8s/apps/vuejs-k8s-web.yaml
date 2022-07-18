@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vuejs-k8s-web-deployment
-  labels:
-    app: vuejs-k8s-web-deployment
 spec:
   replicas: 3
   selector:
@@ -15,16 +13,13 @@ spec:
         app: vuejs-k8s-web-deployment
     spec:
       containers:
-      - name: vuejs-k8s-web
-        image: registry.digitalocean.com/om-k8s/vuejs-k8s-web:latest
-        imagePullPolicy: Always
-        env:
-          - name: PORT
-            value: "8080"
-        ports:
-        - containerPort: 8080
-      imagePullSecrets:
-        - name: om-k8s   
+        - name: vuejs-k8s-web
+          image: elghibaomar/vuejs-k8s-web:latest
+          env:
+            - name: PORT
+              value: "8081"
+          ports:
+          - containerPort: 8080
 
 
 ---
