@@ -4,7 +4,7 @@
     :class="{sidebar: true}"
   >
     <header class="logo">
-      <router-link to="/dashboard"><img src="http://localhost:8080/MLOPS.png" width="150" 
+      <router-link to="/dashboard"><img src="https://i.postimg.cc/SsQ5y7jV/MLOPS.png" width="150" 
      height="150"/></span></router-link>
     </header>
 

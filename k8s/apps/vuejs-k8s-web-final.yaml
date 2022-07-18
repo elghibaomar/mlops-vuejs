@@ -17,9 +17,9 @@ spec:
           image: elghibaomar/vuejs-k8s-web-final:latest
           env:
             - name: PORT
-              value: "8080"
+              value: "8082"
           ports:
-          - containerPort: 8080
+          - containerPort: 8082
 
 
 ---
@@ -33,6 +33,6 @@ spec:
     - name: http
       protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 8082
   selector:
     app: vuejs-k8s-web-final-deployment
