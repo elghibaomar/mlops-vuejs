@@ -1,0 +1,19 @@
+<template>
+  <div >
+    <b-row>
+         <b-col xxs="12">
+            <h1 class="page-title">Facebook Ads &nbsp;
+              <small>
+                <img src="http://localhost:8080/facebook_ads.png"  width="50" height="50"></small>
+             
+           </h1>
+         </b-col>
+      </b-row>
+
+
+            
+
+    
+
+  </div>
+</template>

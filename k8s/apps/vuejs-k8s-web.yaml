@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vuejs-k8s-web-deployment
+  name: vuejs-k8s-web-final-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: vuejs-k8s-web-deployment
+      app: vuejs-k8s-web-final-deployment
   template:
     metadata:
       labels:
-        app: vuejs-k8s-web-deployment
+        app: vuejs-k8s-web-final-deployment
     spec:
       containers:
-        - name: vuejs-k8s-web
-          image: elghibaomar/vuejs-k8s-web:latest
+        - name: vuejs-k8s-web-final
+          image: elghibaomar/vuejs-k8s-web-final:latest
           env:
             - name: PORT
-              value: "8081"
+              value: "8080"
           ports:
           - containerPort: 8080
 
@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: vuejs-k8s-web-service
+  name: vuejs-k8s-web-final-service
 spec:
   type: LoadBalancer
   ports:
@@ -35,4 +35,4 @@ spec:
       port: 80
       targetPort: 8080
   selector:
-    app: vuejs-k8s-web-deployment
+    app: vuejs-k8s-web-final-deployment
