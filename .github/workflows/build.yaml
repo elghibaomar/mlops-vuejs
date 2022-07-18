@@ -22,7 +22,7 @@ jobs:
         run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag elghibaomar/vuejs-k8s-web-final:latest 
+        run: docker build . --file Dockerfile --tag elghibaomar/vuejs-k8s-web-final:latest --env.NODE_ENV=production
           
       
       - name: Docker Push
