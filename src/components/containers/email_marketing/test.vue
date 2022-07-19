@@ -93,7 +93,7 @@ export default {
     }}}},
     async mounted(){
           await axios
-                    .get('http://127.0.0.1:3000/Conversion_Age_Marital')
+                    .get('http://143.198.251.214/Conversion_Age_Marital')
                     .then(response => {
                         this.apex.column.series[0]['data'] = response.data["divorced"];
                         this.apex.column.series[1]['data'] = response.data["married"];

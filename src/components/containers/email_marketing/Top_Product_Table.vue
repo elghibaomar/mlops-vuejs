@@ -59,7 +59,7 @@ export default {
   },
   async created(){
      await axios
-                .get('http://127.0.0.1:3000/Product_Purchase')
+                .get('http://143.198.251.214/Product_Purchase')
                 .then(response => {this.Top_Product = response.data[1];
                 this.Top_Product_Index = response.data[0] }
                 );

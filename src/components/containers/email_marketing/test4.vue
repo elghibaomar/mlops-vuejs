@@ -104,7 +104,7 @@ export default {
     async mounted(){
           console.log('before')
           await axios
-                    .get('http://127.0.0.1:3000/Gender_Conversion')
+                    .get('http://143.198.251.214/Gender_Conversion')
                     .then(response => {
                         this.apex.column.series = response.data}
                     );
