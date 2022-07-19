@@ -36,3 +36,9 @@ spec:
       targetPort: 8082
   selector:
     app: vuejs-k8s-web-final-deployment
+
+
+
+
+
+

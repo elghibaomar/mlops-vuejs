@@ -95,7 +95,7 @@
                    
 
                                 <b-form-group id="input-group-2" >
-                                    <b-form-textarea style="background-color:#000; border:#000;"
+                                    <b-form-textarea style="background-color:#040620; border:#040620;"
                                     id="input-2"
                                     v-model="review"
                                     rows="13"
@@ -159,7 +159,7 @@ Update: ive had this headset replaced once already. And the replacement has done
                      
                       <Widget class="widget-auth mx-auto" title="<h3 class='mt-0'>Choose Your Analytics</h3>" customHeader>
                         <form class="mt" > 
-                                <b-form-select style="background-color:#000; border:#000;"
+                                <b-form-select style="background-color:#040620; border:#040620;"
                                           v-model="visibleComponent"
                                           :options="Componentsx"
                                           ref="review"
