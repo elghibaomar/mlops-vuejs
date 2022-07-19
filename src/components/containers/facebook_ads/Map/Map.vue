@@ -20,7 +20,7 @@ import axios from 'axios'
 import AnimatedNumber from "animated-number-vue";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
-import am4geodata_moroccoHigh from "@amcharts/amcharts4-geodata/moroccoHigh";
+import am4geodata_germanyHigh from "@amcharts/amcharts4-geodata/germanyHigh";
 
 // import cities from './mock';
 
@@ -124,7 +124,7 @@ export default {
                     
                 );
     let map = am4core.create(this.$refs.map, am4maps.MapChart);
-    map.geodata = am4geodata_moroccoHigh;
+    map.geodata = am4geodata_germanyHigh;
     map.projection = new am4maps.projections.NaturalEarth1();
     map.chartContainer.wheelable = false;
     map.seriesContainer.draggable = false;

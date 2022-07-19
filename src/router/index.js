@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/',
     component: () => import("@/components/Layout/Layout"),
-    redirect: `/dashboard`,
+    redirect: `/Email_Marketing`,
     meta: {
       requireLogin: false
   },
@@ -27,8 +27,8 @@ const routes = [
     children: [
       {
         
-          path: '/dashboard',
-          name: 'dashboard',
+          path: '/Email_Marketing',
+          name: 'Email_Marketing',
           component: Dashboard
         },
         {
@@ -36,11 +36,11 @@ const routes = [
           name: 'profile',
           component: Profile
         },
-        {
-          path: '/Email_Marketing',
-          name: 'Email Marketing',
-          component: Email_Marketing
-        },
+        // {
+        //   path: '/Email_Marketing',
+        //   name: 'Email Marketing',
+        //   component: Email_Marketing
+        // },
         {
           path: '/Google_Ads',
           name: 'Google Ads',

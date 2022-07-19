@@ -1,7 +1,6 @@
 <template>
   <div>
-    <canvas id="BarData3"></canvas>
-    
+    <canvas id="BarData"></canvas>
 
 
   </div>
@@ -13,45 +12,25 @@ import Chart from 'chart.js'
 // import BarData from '../../data/BarData.js'
 
 export default {
-  name: 'Marital_Age_Groupe_Bar_Chart',
+  name: 'Marital_Bar_Chart',
   data() {
     return {
       // BarData: BarData,
       
       
-      BarData3 : {
+      BarData : {
+          email_list : [],
           type: "bar",
           data: {
-            labels: ['[18, 30)','[30, 40)','[40, 50)','[50, 60)','[60, 70)','70+'],
+            labels: ["Married", "Single", "Divorced", "unknown"],
             
                         
             datasets: [
               {
-                label: "Divorced",
+                label: "Customers Marital",
                 data: [],
-                backgroundColor: "#047bd7",
-                borderColor: "#047bd7",
-                borderWidth: 3
-              },
-              {
-                label: "Married",
-                data: [],
-                backgroundColor: "#0ac181",
-                borderColor: "#0ac181",
-                borderWidth: 3
-              },
-              {
-                label: "Single",
-                data: [],
-                backgroundColor: "#d8971c",
-                borderColor: "#d8971c",
-                borderWidth: 3
-              },
-              {
-                label: "Unknown",
-                data: [],
-                backgroundColor: "#fe4560",
-                borderColor: "#fe4560",
+                backgroundColor: "#D79922",
+                borderColor: "#D6CE15",
                 borderWidth: 3
               },
             ]
@@ -60,7 +39,7 @@ export default {
             legend: {
               labels: {
                   fontColor: "white",
-                  usePointStyle: false
+                  usePointStyle: true
               }
           },
         
@@ -90,15 +69,12 @@ export default {
   },
   async created(){
      await axios
-                .get('http://127.0.0.1:3000/Conversion_Age_Marital')
+                .get('http://127.0.0.1:3000/Marital_Customer')
                 .then(response => {
-                    this.BarData3.data.datasets[0]['data'] = response.data["divorced"];
-                    this.BarData3.data.datasets[1]['data'] = response.data["married"];
-                    this.BarData3.data.datasets[2]['data'] = response.data["single"];
-                    this.BarData3.data.datasets[3]['data'] = response.data["unknown"];}
+                    this.BarData.data.datasets[0]['data'] = response.data}
                 );
-                const ctx2 = document.getElementById('BarData3');
-                new Chart(ctx2, this.BarData3);
+                const ctx2 = document.getElementById('BarData');
+                new Chart(ctx2, this.BarData);
   },
   // mounted() {
    

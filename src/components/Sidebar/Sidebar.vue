@@ -4,8 +4,8 @@
     :class="{sidebar: true}"
   >
     <header class="logo">
-      <router-link to="/dashboard"><img src="https://i.postimg.cc/SsQ5y7jV/MLOPS.png" width="150" 
-     height="150"/></span></router-link>
+      <router-link to="/dashboard"><img src="../../assets/pic/MLOPS.png" width="150" 
+     height="150"/></router-link>
     </header>
 
  
@@ -14,10 +14,10 @@
       <h5 class="navTitle"></h5>
       <NavLink
         :activeItem="activeItem"
-        header="Dashboard"
-        link="/dashboard"
-        iconName="flaticon-home-3"
-        index="dashboard"
+        header="Email Marketing"
+        link="/Email_Marketing"
+        iconName="flaticon-email"
+        index="Email_Marketing"
         isHeader
       />
 
@@ -29,16 +29,16 @@
         isHeader
       />
      
-      <NavLink
+      <!-- <NavLink
         header="Email Marketing"
         link="/Email_Marketing"
         iconName="flaticon-email"
         index="Email Marketing"
         isHeader
-      />
+      /> -->
 
       <NavLink
-        header="Google Ads"
+        header="Google Adwords"
         link="/Google_Ads"
         iconName="flaticon-charts"
         index="Google Ads"
@@ -46,7 +46,7 @@
       />
 
       <NavLink
-        header="Reviews"
+        header="Customer Satisfaction"
         link="/Reviews"
         iconName="flaticon-message-circle"
         index="Reviews"
@@ -55,21 +55,21 @@
 
     
 
-      <NavLink
+      <!-- <NavLink
         header="Iot"
         link="/Iot"
         iconName="flaticon-core"
         index="Iot"
         isHeader
-      />
+      /> -->
 
-      <NavLink
+      <!-- <NavLink
         header="Monitoring"
         link="/Monitoring"
         iconName="flaticon-equal-3"
         index="Monitoring"
         isHeader
-      />
+      /> -->
 
       <NavLink
         header="To Do"

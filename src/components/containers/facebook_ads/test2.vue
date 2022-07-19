@@ -30,7 +30,7 @@ export default {
           height: 350,
           type: 'line'
         },
-        colors: ['#0965dd'],
+        colors: ['#ca3c3c'],
         plotOptions: {
           line: {
             columnWidth: '45%',

@@ -5,10 +5,9 @@
 
       <b-row>
          <b-col xxs="12">
-            <h1 class="page-title">Dashboard &nbsp;
+            <h1 class="page-title">Google Adwords &nbsp;
               <small>
-                <small>Data Analytics</small>
-              </small>
+                <img src="../../assets/pic/adwords.png"  width="40" height="40"></small>
            </h1>
          </b-col>
       </b-row>

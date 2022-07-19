@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: vuejs-k8s-web-final
-          image: elghibaomar/vuejs-k8s-web-final:latest
+          image: elghibaomar/vuejs-k8s-web-final:l1
           env:
             - name: PORT
               value: "8082"
