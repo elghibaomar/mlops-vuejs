@@ -2,9 +2,8 @@
   <div class="auth-page">
     <b-container>
       <Widget class="widget-auth mx-auto" title="<h3 class='mt-0'>Login to your Web App</h3>" customHeader>
-        <p class="widget-auth-info">
-          Use your email to sign in.
-        </p>
+        <br><br>
+         <img src="../../assets/pic/MLOPS.png"  width="200" height="200" class="center">
         <form class="mt" @submit.prevent="login">
           <b-alert class="alert-sm" variant="danger" :show="!!errorMessage">
             {{errorMessage}}
@@ -33,32 +32,22 @@
           </b-form-group>
           <div class="bg-widget auth-widget-footer">
             <b-button type="submit" variant="danger" class="auth-btn" size="sm">
-              <span class="auth-btn-circle">
+              <!-- <span class="auth-btn-circle">
                 <i class="la la-caret-right"></i>
-              </span>
+              </span> -->
               Login
             </b-button>
             <p class="widget-auth-info mt-4">
-              Don't have an account? Sign up now!
+  
             </p>
-            <router-link class="d-block text-center mb-4" to="login">Create an Account</router-link>
-            <div class="social-buttons">
-              <b-button variant="primary" class="social-button">
-                <i class="social-icon social-google"></i>
-                <p class="social-text">GOOGLE</p>
-              </b-button>
-              <b-button variant="success" class="social-button">
-                <i class="social-icon social-microsoft"></i>
-                <p class="social-text">MICROSOFT</p>
-              </b-button>
-            </div>
+
           </div>
         </form>
       </Widget>
     </b-container>
-    <footer class="auth-footer">
+    <!-- <footer class="auth-footer">
       Light Blue Vue Admin Dashboard Template - Made by <a href="https://flatlogic.com" target="_blank">Flatlogic</a>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
@@ -91,3 +80,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+</style>
