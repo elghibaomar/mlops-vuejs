@@ -11,8 +11,7 @@ import Monitoring from '../views/app/Monitoring.vue'
 import Email_Marketing from '../views/app/Email_Marketing.vue'
 import ToDo from '../views/app/ToDo.vue'
 import Upload from '../views/app/Upload.vue'
-import Login from '../views/Login/Login.vue';
-import ErrorPage from '../views/Error/Error.vue';
+import login from '../views/login/login.vue';
 
 Vue.use(VueRouter)
 
@@ -20,14 +19,10 @@ const routes = [
 
   {
     path: '/login',
-    name: 'Login',
-    component: Login,
+    name: 'login',
+    component: login,
   },
-  {
-    path: '/error',
-    name: 'Error',
-    component: ErrorPage,
-  },
+
   
   {
     path: '/',
