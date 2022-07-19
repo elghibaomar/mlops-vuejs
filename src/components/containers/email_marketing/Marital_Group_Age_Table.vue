@@ -105,7 +105,7 @@ export default {
   },
   async created(){
      await axios
-                .get('http://127.0.0.1:3000/Conversion_Age_Marital')
+                .get('http://143.198.251.214/Conversion_Age_Marital')
                 .then(response => {
                     this.tableStyles[0]['divorced'] = response.data['divorced'];
                     this.tableStyles[0]['married'] = response.data[0];

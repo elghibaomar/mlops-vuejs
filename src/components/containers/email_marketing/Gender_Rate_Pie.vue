@@ -42,7 +42,7 @@ export default {
   },
   async created(){
      await axios
-                .get('http://127.0.0.1:3000/Gender_Conversion')
+                .get('http://143.198.251.214/Gender_Conversion')
                 .then(response => {
                     this.PieData.data.datasets[0]['data'] = response.data}
                 );

@@ -27,7 +27,7 @@ spec:
         ports:
         - containerPort: 8002
       imagePullSecrets:
-        - name: cfe-k8s   
+        - name: om-k8s   
 
 
 ---

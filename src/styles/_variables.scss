@@ -90,8 +90,8 @@ $font-weight-base: $font-weight-thin !default;
 $addition-bg: rgba($white, .1) !default;
 
 $body-bg: $violet !default;
-$body-bg-gradient-start: #21222b;
-$body-bg-gradient-end: #000;
+$body-bg-gradient-start: $violet;
+$body-bg-gradient-end: #17193B;
 $body-bg-light: lighten($body-bg, 3%);
 $default-bg: radial-gradient(farthest-side ellipse at 10% 0, $body-bg-gradient-start, $body-bg-gradient-end);
 
