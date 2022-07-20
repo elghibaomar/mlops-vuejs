@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # install project dependencies
-RUN npm install -g npm@8.14.0
+RUN npm install npm@8.14.0
 
 # copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
