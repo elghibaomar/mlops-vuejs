@@ -23,14 +23,25 @@ export default {
       apex: {
     column: {
       series: [{
-            data : []
+            data : [1.1527377521613833,
+        0.0,
+        0.27548209366391185,
+        1.0666666666666667,
+        0.30864197530864196,
+        0.6349206349206349,
+        0.0,
+        0.33444816053511706,
+        0.0,
+        0.3144654088050315,
+        0.7451564828614009,
+        0.8051529790660225]
       }],
       options: {
         chart: {
           height: 350,
           type: 'line'
         },
-        colors: ['#ca3c3c'],
+        colors: ['#0965dd'],
         plotOptions: {
           line: {
             columnWidth: '45%',
@@ -86,7 +97,7 @@ export default {
     async mounted(){
           // console.log('before')
           await axios
-                    .get('http://127.0.0.1:3000/monthly_customer_purchase')
+                    .get('http://143.198.251.214/monthly_customer_purchase')
                     .then(response => {
                         this.apex.column.series[0]['data'] = response.data[2]}
                     );

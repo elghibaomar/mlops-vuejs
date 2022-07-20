@@ -8,7 +8,7 @@
             </div>
             <div class="stat-item">
               <h6 class="name">Percentage %</h6>
-              <p style="color:#28a745;" class="value">{{ntr}}</p>
+              <p style="color:#28a745;" class="value">0.27</p>
             </div>
           </div>
           <b-progress variant="info" :value="ntr"

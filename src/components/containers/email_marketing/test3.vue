@@ -22,7 +22,10 @@ export default {
       loaded : false,
       apex: {
     column: {
-      series: [],
+            series: [
+    3749,
+    868
+],
       options: {
         chart: {
           toolbar: {

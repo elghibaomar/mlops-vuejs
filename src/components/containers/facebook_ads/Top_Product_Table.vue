@@ -53,15 +53,19 @@ export default {
   name: 'Top_Product_Table',
   data() {
     return {
-      Top_Product_Index: [],
-      Top_Product: [],
+      Top_Product_Index: ["85123A",
+        "22834",
+        "22837",],
+      Top_Product: [34,
+        25,
+        22],
     }
   },
   async created(){
      await axios
-                .get('http://127.0.0.1:3000/Product_Purchase')
-                .then(response => {this.Top_Product = response.data[1];
-                this.Top_Product_Index = response.data[0] }
+                .get('http://143.198.251.214/Product_Purchase' , {headers: { 'Accept': 'application/json' }})
+                .then(response => {this.Top_Product = [response.data[1]];
+                this.Top_Product_Index = [response.data[0]] }
                 );
   },
 }

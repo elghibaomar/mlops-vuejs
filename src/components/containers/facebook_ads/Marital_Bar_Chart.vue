@@ -23,7 +23,10 @@ export default {
       apex: {
     column: {
       series: [{
-            data : [8,5,6,4]
+            data : [ 24928,
+    11568,
+    4612,
+    80]
       }],
       options: {
         chart: {
@@ -92,7 +95,7 @@ export default {
     async mounted(){
           // console.log('before')
           await axios
-                    .get('http://127.0.0.1:3000/Marital_Customer')
+                    .get('http://143.198.251.214/Marital_Customer')
                     .then(response => {
                         this.apex.column.series[0]['data'] = response.data}
                     );

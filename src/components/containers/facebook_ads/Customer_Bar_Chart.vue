@@ -76,7 +76,7 @@ export default {
   },
   async created(){
      await axios
-                .get('http://127.0.0.1:3000/monthly_customer_purchase')
+                .get('http://143.198.251.214/monthly_customer_purchase')
                 .then(response => {
                     this.BarData1.data.datasets[0]['data'] = response.data[0];
                     this.BarData1.data.datasets[1]['data'] = response.data[1]}

@@ -28,28 +28,48 @@ export default {
             datasets: [
               {
                 label: "Divorced",
-                data: [],
+                data: [0.0021167754454048332,
+        0.0075569724878970365,
+        0.011970359110773323,
+        0.017341882832993295,
+        0.03729281767955801,
+        0.13646055437100213],
                 backgroundColor: "#047bd7",
                 borderColor: "#047bd7",
                 borderWidth: 3
               },
               {
                 label: "Married",
-                data: [],
+                data: [0.027870876697830307,
+        0.052957846262840946,
+        0.054626638799163976,
+        0.07767414747886914,
+        0.3011049723756906,
+        0.32196162046908317],
                 backgroundColor: "#0ac181",
                 borderColor: "#0ac181",
                 borderWidth: 3
               },
               {
                 label: "Single",
-                data: [],
+                data: [0.1324748632915858,
+        0.040382571732199786,
+        0.012350370511115333,
+        0.006412124744972311,
+        0.006906077348066298,
+        0.01279317697228145],
                 backgroundColor: "#d8971c",
                 borderColor: "#d8971c",
                 borderWidth: 3
               },
               {
                 label: "Unknown",
-                data: [],
+                data: [0.0001763979537837361,
+        0.00035423308537017357,
+        0.0002850085502565077,
+        0.0001457301078402798,
+        0.0013812154696132596,
+        0.0],
                 backgroundColor: "#fe4560",
                 borderColor: "#fe4560",
                 borderWidth: 3
@@ -90,7 +110,7 @@ export default {
   },
   async created(){
      await axios
-                .get('http://127.0.0.1:3000/Conversion_Age_Marital')
+                .get('http://143.198.251.214/Conversion_Age_Marital')
                 .then(response => {
                     this.BarData3.data.datasets[0]['data'] = response.data["divorced"];
                     this.BarData3.data.datasets[1]['data'] = response.data["married"];

@@ -23,7 +23,10 @@ export default {
       apex: {
     column: {
       series: [{
-            data : [8,5,6,4]
+            data : [ 24928,
+    11568,
+    4612,
+    80]
       }],
       options: {
         chart: {
