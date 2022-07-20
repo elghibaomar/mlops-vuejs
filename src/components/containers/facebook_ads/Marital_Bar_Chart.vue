@@ -35,7 +35,7 @@ export default {
         },
 
 
-        // colors: ["#FCCF31", "#17ead9", "#f02fc2"],
+        colors: ["#FCCF31", "#17ead9", "#f02fc2"],
         stroke: {
           width: 3
         },
@@ -50,7 +50,7 @@ export default {
           bar: {
             columnWidth: '45%',
             distributed: true,
-            horizontal: true,
+            horizontal: false,
 
           }
         },

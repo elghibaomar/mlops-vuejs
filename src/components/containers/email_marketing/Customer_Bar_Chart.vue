@@ -96,13 +96,13 @@ export default {
   },
     }
   },
-  async created(){
-     await axios
-                .get('http://143.198.251.214/monthly_customer_purchase')
-                .then(response => {
-                    this.BarData1.data.datasets[0]['data'] = response.data[0];
-                    this.BarData1.data.datasets[1]['data'] = response.data[1]}
-                );
+  mounted(){
+    //  await axios
+    //             .get('http://143.198.251.214/monthly_customer_purchase')
+    //             .then(response => {
+    //                 this.BarData1.data.datasets[0]['data'] = response.data[0];
+    //                 this.BarData1.data.datasets[1]['data'] = response.data[1]}
+    //             );
                 const ctx2 = document.getElementById('BarData1');
                 new Chart(ctx2, this.BarData1);
   },
