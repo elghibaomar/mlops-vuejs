@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router';
 // import HomeView from '../views/HomeView.vue'
 import Dashboard from '../views/app/Dashboard.vue'
 import Profile from '../views/app/Profile.vue'
@@ -15,7 +15,7 @@ import Login from '../views/Error/Login';
 import ErrorPage from '../views/Error/Error';
 import Layout from '@/components/Layout/Layout';
 
-Vue.use(VueRouter)
+// Vue.use(VueRouter)
 
 Vue.use(Router);
 
