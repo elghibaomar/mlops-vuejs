@@ -1,11 +1,14 @@
 <template>
   <b-navbar toggleable="md" class="app-header d-print-none">
     <b-navbar-nav class="navbar-nav-mobile ml-auto">
-    
+      
+      
         <b-nav-item-dropdown no-caret right class="mr-2" menu-class="dropdown-menu-settings">
           <template slot="button-content">
             <i class="fi flaticon-core" />
           </template>
+
+          
           <b-dropdown-item-button @click="profile()">
             <i class="la la-user" /> My Account
           </b-dropdown-item-button>
@@ -63,6 +66,7 @@ export default {
     },
     logout() {
       // window.localStorage.setItem('authenticated', false);
+      window.localStorage.setItem('authenticated', false);
       this.$router.push('/login');
     },
     profile() {

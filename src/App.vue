@@ -1,24 +1,22 @@
 <template>
-      <div>
+  <router-view />
+</template>
 
+<script>
+export default {
+  name: 'App',
+  created() {
+    const currentPath = this.$router.history.current.path;
 
-
-        <div id="app">
-          <router-view />
-        </div>
-      </div>
-    </template>
-    
-    <script>
-    import Layout from './components/Layout/Layout.vue'
-
-    
-    export default {
-      components: {
-        Layout: Layout,
-      },
-      name: 'App'
+    if (window.localStorage.getItem('authenticated') === 'false') {
+      this.$router.push('/login');
     }
-    </script>
-    
-  <style src="./styles/theme.scss" lang="scss" />
+
+    if (currentPath === '/' || currentPath === '/app') {
+      this.$router.push('/');
+    }
+  },
+};
+</script>
+
+<style src="./styles/theme.scss" lang="scss" />

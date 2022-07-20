@@ -11,26 +11,43 @@ import Monitoring from '../views/app/Monitoring.vue'
 import Email_Marketing from '../views/app/Email_Marketing.vue'
 import ToDo from '../views/app/ToDo.vue'
 import Upload from '../views/app/Upload.vue'
-// import login from '../views/login/login.vue';
+import Login from '@/views/Login/Login';
+import ErrorPage from '@/views/Error/Error';
+import Layout from '@/components/Layout/Layout';
 
 Vue.use(VueRouter)
 
 const routes = [
 
-  // {
-  //   path: '/login',
-  //   name: 'login',
-  //   component: login,
-  // },
-
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+  },
+  {
+    path: '/error',
+    name: 'Error',
+    component: ErrorPage,
+  },
+  {
+    path: '*',
+    name: 'Error',
+    component: ErrorPage,
+  },
+  {
+    path: '',
+    name: '',
+    component: Profile,
+  },
   
   {
-    path: '/',
-    component: () => import("@/components/Layout/Layout"),
-    redirect: `/Email_Marketing`,
-    meta: {
-      requireLogin: false
-  },
+    path: '/app',
+      name: 'Layout',
+      component: Layout,
+      meta: {
+        requireLogin: true
+    },
+
 
     children: [
       {

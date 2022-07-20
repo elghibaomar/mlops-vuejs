@@ -4,14 +4,20 @@
       <Widget class="widget-auth mx-auto" title="<h3 class='mt-0'>Login to your Web App</h3>" customHeader>
         <br><br>
          <img src="../../assets/pic/MLOPS.png"  width="200" height="200" class="center">
+
+          <p style="color:#fff;">User : test@mlops.ma</p>
+           <p style="color:#fff;">Password : test1234</p>
         <form class="mt" @submit.prevent="login">
           <b-alert class="alert-sm" variant="danger" :show="!!errorMessage">
             {{errorMessage}}
+
+           
           </b-alert>
-          <b-form-group label="Email" label-for="email">
+          <b-form-group >
             <b-input-group>
-              <b-input-group-text slot="prepend"><i class="la la-user text-white"></i></b-input-group-text>
-              <input id="email"
+              <b-input-group-text slot="prepend" style="background-color:#000; border:#000;"><i class="la la-user text-white"></i></b-input-group-text>
+              <input style="background-color:#000; border:#000;"
+                      id="email" 
                      ref="email"
                      class="form-control input-transparent pl-3"
                      type="email"
@@ -19,10 +25,11 @@
                      placeholder="Email"/>
             </b-input-group>
           </b-form-group>
-          <b-form-group label="Password" label-for="password">
+          <b-form-group >
             <b-input-group>
-              <b-input-group-text slot="prepend"><i class="la la-lock text-white"></i></b-input-group-text>
-              <input id="password"
+              <b-input-group-text slot="prepend" style="background-color:#000; border:#000;"><i class="la la-lock text-white"></i></b-input-group-text>
+              <input style="background-color:#000; border:#000;"
+                      id="password"
                      ref="password"
                      class="form-control input-transparent pl-3"
                      type="password"
@@ -69,13 +76,13 @@ export default {
 
       if (email.length !== 0 && password.length !== 0) {
         window.localStorage.setItem('authenticated', true);
-        this.$router.push('/app/dashboard');
+        this.$router.push('email_marketing');
       }
     },
   },
   created() {
     if (window.localStorage.getItem('authenticated') === 'true') {
-      this.$router.push('/app/dashboard');
+      this.$router.push('email_marketing');
     }
   },
 };

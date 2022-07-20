@@ -12,49 +12,26 @@
             </b-row>
         
             <b-row>
-                <b-col lg= "3">
-          
-                  <Widget
-                      title="<h6> Created </h6>"
-                       customHeader
-                    >   
-                    <Created/>
-                    
-                    </widget>
 
-                    </b-col>
-
-                    
-               <b-col lg= "3">
-          
-                  <Widget
-                      title="<h6> In progress </h6>"
-                       customHeader
-                    >   
-                    <InProgress/>
-                    
-                    </widget>
-           
-               </b-col>
-                <b-col lg= "3">
+                <b-col lg= "5">
           
                   <Widget
                       title="<h6> Testing </h6>"
                        customHeader
                     >   
-                    <Testing/>
+                    <Created/>
                     
                     </widget>
            
                </b-col>
 
-               <b-col lg= "3">
+               <b-col lg= "5">
 
                     <Widget
                       title="<h6> Done </h6>"
                        customHeader
                     >   
-                    <Done/>
+                    <Testing/>
                     
                     </widget>
            
