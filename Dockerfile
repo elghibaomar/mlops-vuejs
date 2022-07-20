@@ -12,7 +12,7 @@ COPY package*.json ./
 # install project dependencies
 RUN npm install
 
-RUN npm install webpack-cli
+RUN npm install webpack@3.3.12
 
 # copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .

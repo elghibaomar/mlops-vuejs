@@ -20,7 +20,6 @@
     "vue-apexcharts": "^1.6.2",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
-   
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
