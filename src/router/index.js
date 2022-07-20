@@ -17,101 +17,110 @@ import Layout from '@/components/Layout/Layout';
 
 Vue.use(VueRouter)
 
-const routes = [
+Vue.use(Router);
 
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login,
-  },
-  {
-    path: '/error',
-    name: 'Error',
-    component: ErrorPage,
-  },
-  {
-    path: '*',
-    name: 'Error',
-    component: ErrorPage,
-  },
-  {
-    path: '',
-    name: '',
-    component: Profile,
-  },
-  
-  {
-    path: '/app',
-      name: 'Layout',
-      component: Layout,
-      meta: {
-        requireLogin: true
+export default new Router({
+  mode: 'hash',
+
+  routes : [
+
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
     },
+    {
+      path: '/error',
+      name: 'Error',
+      component: ErrorPage,
+    },
+    {
+      path: '*',
+      name: 'Error',
+      component: ErrorPage,
+    },
+    {
+      path: '',
+      name: '',
+      component: Profile,
+    },
+    
+    {
+      path: '/app',
+        name: 'Layout',
+        component: Layout,
+        meta: {
+          requireLogin: true
+      },
 
 
-    children: [
-      {
-        
-          path: '/Email_Marketing',
-          name: 'Email_Marketing',
-          component: Dashboard
-        },
+      children: [
         {
-          path: '/profile',
-          name: 'profile',
-          component: Profile
-        },
-        // {
-        //   path: '/Email_Marketing',
-        //   name: 'Email Marketing',
-        //   component: Email_Marketing
-        // },
-        {
-          path: '/Google_Ads',
-          name: 'Google Ads',
-          component: Google_Ads
-        },
-        {
-          path: '/Facebook_Ads',
-          name: 'Facebook Ads',
-          component: Facebook_Ads
-        },
-        {
-          path: '/Reviews',
-          name: 'Reviews',
-          component: Reviews
-        },
-        {
-          path: '/Iot',
-          name: 'Iot',
-          component: Iot
-        },
-        {
-          path: '/Monitoring',
-          name: 'Monitoring',
-          component: Monitoring
-        },
-        {
-          path: '/todo',
-          name: 'todo',
-          component: ToDo
-        },
-        {
-          path: '/upload',
-          name: 'upload',
-          component: Upload
-        },
-        
-     
+          
+            path: '/Email_Marketing',
+            name: 'Email_Marketing',
+            component: Dashboard
+          },
+          {
+            path: '/profile',
+            name: 'profile',
+            component: Profile
+          },
+          // {
+          //   path: '/Email_Marketing',
+          //   name: 'Email Marketing',
+          //   component: Email_Marketing
+          // },
+          {
+            path: '/Google_Ads',
+            name: 'Google Ads',
+            component: Google_Ads
+          },
+          {
+            path: '/Facebook_Ads',
+            name: 'Facebook Ads',
+            component: Facebook_Ads
+          },
+          {
+            path: '/Reviews',
+            name: 'Reviews',
+            component: Reviews
+          },
+          {
+            path: '/Iot',
+            name: 'Iot',
+            component: Iot
+          },
+          {
+            path: '/Monitoring',
+            name: 'Monitoring',
+            component: Monitoring
+          },
+          {
+            path: '/todo',
+            name: 'todo',
+            component: ToDo
+          },
+          {
+            path: '/upload',
+            name: 'upload',
+            component: Upload
+          }
+        ]}
       ]
-    },
+    }
+    )
+          
+       
+      
    
-];
 
-const router = new VueRouter({
-  base: process.env.BASE_URL,
-  routes
-})
 
-export default router
+// const router = new VueRouter({
+//   mode: 'history',
+//   base: process.env.BASE_URL,
+//   routes
+// })
+
+// export default router
 
