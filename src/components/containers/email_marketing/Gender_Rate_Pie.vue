@@ -40,12 +40,12 @@ export default {
   },
     }
   },
-  async created(){
-     await axios
-                .get('http://143.198.251.214/Gender_Conversion')
-                .then(response => {
-                    this.PieData.data.datasets[0]['data'] = response.data}
-                );
+  mounted(){
+    //  await axios
+    //             .get('http://143.198.251.214/Gender_Conversion')
+    //             .then(response => {
+    //                 this.PieData.data.datasets[0]['data'] = response.data}
+    //             );
                 const ctx2 = document.getElementById('PieData');
                 new Chart(ctx2, this.PieData);
   },

@@ -94,16 +94,16 @@ export default {
         }
       }
     }}}},
-    async mounted(){
-          // console.log('before')
-          await axios
-                    .get('http://143.198.251.214/monthly_customer_purchase')
-                    .then(response => {
-                        this.apex.column.series[0]['data'] = response.data[2]}
-                    );
-          this.loaded = true;
-          // console.log('after')
-        } 
+    // async mounted(){
+    //       // console.log('before')
+    //       await axios
+    //                 .get('http://143.198.251.214/monthly_customer_purchase')
+    //                 .then(response => {
+    //                     this.apex.column.series[0]['data'] = response.data[2]}
+    //                 );
+    //       this.loaded = true;
+    //       // console.log('after')
+    //     } 
 
    
 }

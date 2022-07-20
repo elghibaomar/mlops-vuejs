@@ -77,12 +77,12 @@ export default {
   },
     }
   },
-  async created(){
-     await axios
-                .get('http://143.198.251.214/monthly_customer_purchase')
-                .then(response => {
-                    this.BarData2.data.datasets[0]['data'] = response.data[2]}
-                );
+  mounted(){
+    //  await axios
+    //             .get('http://143.198.251.214/monthly_customer_purchase')
+    //             .then(response => {
+    //                 this.BarData2.data.datasets[0]['data'] = response.data[2]}
+    //             );
                 const ctx2 = document.getElementById('BarData2');
                 new Chart(ctx2, this.BarData2);
   },

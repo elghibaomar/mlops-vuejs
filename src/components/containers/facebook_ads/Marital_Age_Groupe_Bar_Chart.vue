@@ -108,15 +108,15 @@ export default {
   },
     }
   },
-  async created(){
-     await axios
-                .get('http://143.198.251.214/Conversion_Age_Marital')
-                .then(response => {
-                    this.BarData3.data.datasets[0]['data'] = response.data["divorced"];
-                    this.BarData3.data.datasets[1]['data'] = response.data["married"];
-                    this.BarData3.data.datasets[2]['data'] = response.data["single"];
-                    this.BarData3.data.datasets[3]['data'] = response.data["unknown"];}
-                );
+  mounted(){
+    //  await axios
+    //             .get('http://143.198.251.214/Conversion_Age_Marital')
+    //             .then(response => {
+    //                 this.BarData3.data.datasets[0]['data'] = response.data["divorced"];
+    //                 this.BarData3.data.datasets[1]['data'] = response.data["married"];
+    //                 this.BarData3.data.datasets[2]['data'] = response.data["single"];
+    //                 this.BarData3.data.datasets[3]['data'] = response.data["unknown"];}
+    //             );
                 const ctx2 = document.getElementById('BarData3');
                 new Chart(ctx2, this.BarData3);
   },
