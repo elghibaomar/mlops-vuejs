@@ -16,7 +16,7 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.component('apexchart', VueApexCharts);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 new Vue({
   router,
