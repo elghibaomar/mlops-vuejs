@@ -11,8 +11,6 @@ COPY package*.json ./
 
 # install project dependencies
 
-RUN npm -g install npm@latest
-
 RUN npm install
 
 # copy project files and folders to the current working directory (i.e. 'app' folder)
