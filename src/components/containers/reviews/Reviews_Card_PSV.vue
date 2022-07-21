@@ -11,7 +11,7 @@
               <p style="color:#28a745;" class="value">0.4</p>
             </div>
           </div>
-          <b-progress variant="success" :value="psv"
+          <b-progress variant="success" :value="0.4"
             :max="1" class="progress-xs" />
             
           </div>

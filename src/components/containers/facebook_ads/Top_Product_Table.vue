@@ -53,12 +53,12 @@ export default {
   name: 'Top_Product_Table',
   data() {
     return {
-      Top_Product_Index: ["85123A",
+      Top_Product_Index: ["4556F",
         "22834",
-        "22837",],
-      Top_Product: [34,
-        25,
-        22],
+        "949HJ4",],
+      Top_Product: [320,
+        89,
+        74],
     }
   },
   // async created(){

@@ -23,8 +23,9 @@ export default {
       apex: {
     column: {
             series: [
-    3749,
-    868
+    8799,
+    345,
+    21
 ],
       options: {
         chart: {
@@ -37,7 +38,7 @@ export default {
           type: 'pie'
         },
         
-        colors:['#813772','#062f4f'],
+        colors: ["#FCCF31", "#17ead9", "#f02fc2"],
         fill: {
             type: "gradient",
             gradient: {
@@ -55,8 +56,8 @@ export default {
             }
           }
         }],
-        labels: ['Femal', 'Mal'],
-        // colors: columnColors,
+        labels: ['Femal', 'Mal',"Unknown"],
+        colors: ["#FCCF31", "#17ead9", "#f02fc2"],
         // plotOptions: {
         //   pie: {
         //     columnWidth: '45%',

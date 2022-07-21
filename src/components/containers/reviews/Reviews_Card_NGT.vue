@@ -11,7 +11,7 @@
               <p style="color:#28a745;" class="value">0.33</p>
             </div>
           </div>
-          <b-progress variant="danger" :value="ngt"
+          <b-progress variant="danger" :value="0.33"
             :max="1" class="progress-xs" />
             
           </div>
