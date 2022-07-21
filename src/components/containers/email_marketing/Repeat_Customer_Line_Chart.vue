@@ -27,18 +27,7 @@ export default {
             datasets: [
               {
                 label: "Repeat Customers Rate %",
-                data: [1.1527377521613833,
-        0.0,
-        0.27548209366391185,
-        1.0666666666666667,
-        0.30864197530864196,
-        0.6349206349206349,
-        0.0,
-        0.33444816053511706,
-        0.0,
-        0.3144654088050315,
-        0.7451564828614009,
-        0.8051529790660225],
+                data: [],
                 backgroundColor: "#062f4f",
                 borderColor: "#062f4f",
                 borderWidth: 3
@@ -77,12 +66,12 @@ export default {
   },
     }
   },
-  mounted(){
-    //  await axios
-    //             .get('http://143.198.251.214/monthly_customer_purchase')
-    //             .then(response => {
-    //                 this.BarData2.data.datasets[0]['data'] = response.data[2]}
-    //             );
+  async created(){
+     await axios
+                .get('http://143.198.251.214/monthly_customer_purchase')
+                .then(response => {
+                    this.BarData2.data.datasets[0]['data'] = response.data[2]}
+                );
                 const ctx2 = document.getElementById('BarData2');
                 new Chart(ctx2, this.BarData2);
   },

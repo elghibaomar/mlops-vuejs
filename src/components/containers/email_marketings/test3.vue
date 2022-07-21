@@ -19,10 +19,13 @@ export default {
   },
   data: function() {
     return {
-      loaded : false,
+      loaded : true,
       apex: {
     column: {
-      series: [],
+            series: [
+    3749,
+    868
+],
       options: {
         chart: {
           toolbar: {
@@ -34,7 +37,7 @@ export default {
           type: 'pie'
         },
         
-        colors:['#db9a28','#107fdf'],
+        colors:['#813772','#062f4f'],
         fill: {
             type: "gradient",
             gradient: {
@@ -101,16 +104,16 @@ export default {
         }
       }
     }}}},
-    async mounted(){
-          console.log('before')
-          await axios
-                    .get('http://143.198.251.214/Gender_Conversion')
-                    .then(response => {
-                        this.apex.column.series = response.data}
-                    );
-          this.loaded = true;
-          console.log('after')
-        } 
+    // async mounted(){
+    //       console.log('before')
+    //       await axios
+    //                 .get('http://143.198.251.214/Gender_Conversion')
+    //                 .then(response => {
+    //                     this.apex.column.series = response.data}
+    //                 );
+    //       this.loaded = true;
+    //       console.log('after')
+    //     } 
 
    
 }

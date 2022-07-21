@@ -1,6 +1,6 @@
 <template>
   <div class="example">
-    <apexcharts  height="350" type="line" :options="apex.column.options" :series="apex.column.series" v-if="loaded"></apexcharts>
+    <apexcharts  height="350" type="bar" :options="apex.column.options" :series="apex.column.series" v-if="loaded"></apexcharts>
   </div>
 </template>
 
@@ -22,37 +22,44 @@ export default {
       loaded : false,
       apex: {
     column: {
-      series: [{
-            data : []
-      }],
+      series: [
+        {
+          name : "divorced",
+          data : []},
+        {
+          name : "married",
+          data : []},
+        {
+          name : "single",
+          data : []},
+        {
+          name : "unknown",
+          data : []},],
       options: {
         chart: {
-          height: 350,
-          type: 'line'
+          height: 450,
+          type: 'bar',
         },
-        colors: ['#0965dd'],
+        colors: columnColors,
         plotOptions: {
-          line: {
+          bar: {
             columnWidth: '45%',
             distributed: true,
-            horizontal: true,
-
+            endingShape: "rounded"
+            
           }
         },
         fill: {
-            type: "gradient",
-            gradient: {
-              // gradientToColors: ["#F55555", "#6078ea", "#6094ea"]
-            }
-          },
+        opacity: 1
+      },
         dataLabels: {
           enabled: false,
         },
         xaxis: {
-          categories: [1,2,3,4,5,6,7,8,9,10,11,12],
+          categories: ['[18, 30)','[30, 40)','[40, 50)','[50, 60)','[60, 70)','70+'],
           labels: {
             style: {
-              colors: colors.chartTextColor,
+              colors: '#fff',
               fontSize: '14px',
             }
           },
@@ -66,13 +73,14 @@ export default {
         yaxis: {
           labels: {
             style: {
-              colors: colors.chartTextColor,
+              colors: '#fff',
             }
           }
         },
         tooltip: {
           theme: 'dark'
         },
+        
         grid: {
           borderColor: colors.gridLineColor
         },
@@ -83,16 +91,17 @@ export default {
         }
       }
     }}}},
-    async mounted(){
-          // console.log('before')
-          await axios
-                    .get('http://143.198.251.214/monthly_customer_purchase')
-                    .then(response => {
-                        this.apex.column.series[0]['data'] = response.data[2]}
-                    );
-          this.loaded = true;
-          // console.log('after')
-        } 
+    // async mounted(){
+    //       await axios
+    //                 .get('http://143.198.251.214/Conversion_Age_Marital')
+    //                 .then(response => {
+    //                     this.apex.column.series[0]['data'] = response.data["divorced"];
+    //                     this.apex.column.series[1]['data'] = response.data["married"];
+    //                     this.apex.column.series[2]['data'] = response.data["single"];
+    //                     this.apex.column.series[3]['data'] = response.data["unknown"];}
+    //                 );     
+    //       this.loaded = true;
+    //     } 
 
    
 }

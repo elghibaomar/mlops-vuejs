@@ -19,14 +19,11 @@ export default {
   },
   data: function() {
     return {
-      loaded : true,
+      loaded : false,
       apex: {
     column: {
       series: [{
-            data : [ 24928,
-    11568,
-    4612,
-    80]
+            data : [8,5,6,4]
       }],
       options: {
         chart: {
@@ -92,16 +89,16 @@ export default {
         }
       }
     }}}},
-    // async mounted(){
-    //       // console.log('before')
-    //       await axios
-    //                 .get('http://143.198.251.214/Marital_Customer')
-    //                 .then(response => {
-    //                     this.apex.column.series[0]['data'] = response.data}
-    //                 );
-    //       this.loaded = true;
-    //       // console.log('after')
-    //     } 
+    async mounted(){
+          // console.log('before')
+          await axios
+                    .get('http://143.198.251.214/Marital_Customer')
+                    .then(response => {
+                        this.apex.column.series[0]['data'] = response.data}
+                    );
+          this.loaded = true;
+          // console.log('after')
+        } 
 
    
 }

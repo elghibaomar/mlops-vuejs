@@ -28,38 +28,16 @@ export default {
             datasets: [
               {
                 label: "All Customer Purchase",
-                data: [347,
-        314,
-        345,
-        377,
-        401,
-        315,
-        364,
-        299,
-        329,
-        618,
-        471,
-        521],
-                backgroundColor: "#FCCF31",
-                borderColor: "#FCCF31",
+                data: [],
+                backgroundColor: "#057bd6",
+                borderColor: "#057bd6",
                 borderWidth: 3
               },
               {
                 label: "Unique Customers Purchase",
-                data: [343,
-        714,
-        662,
-        471,
-        423,
-        413,
-        464,
-        398,
-        529,
-        717,
-        866,
-        716],
-                backgroundColor: "#17ead9",
-                borderColor: "#17ead9",
+                data: [],
+                backgroundColor: "#0ec281",
+                borderColor: "#0ec281",
                 borderWidth: 3
               },
             ]
@@ -96,13 +74,13 @@ export default {
   },
     }
   },
-  mounted(){
-    //  await axios
-    //             .get('http://143.198.251.214/monthly_customer_purchase')
-    //             .then(response => {
-    //                 this.BarData1.data.datasets[0]['data'] = response.data[0];
-    //                 this.BarData1.data.datasets[1]['data'] = response.data[1]}
-    //             );
+  async created(){
+     await axios
+                .get('http://143.198.251.214/monthly_customer_purchase')
+                .then(response => {
+                    this.BarData1.data.datasets[0]['data'] = response.data[0];
+                    this.BarData1.data.datasets[1]['data'] = response.data[1]}
+                );
                 const ctx2 = document.getElementById('BarData1');
                 new Chart(ctx2, this.BarData1);
   },

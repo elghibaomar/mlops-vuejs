@@ -69,7 +69,7 @@ export default {
   },
   async created(){
      await axios
-                .get('http://143.198.251.214//Marital_Customer')
+                .get('http://143.198.251.214/Marital_Customer')
                 .then(response => {
                     this.BarData.data.datasets[0]['data'] = response.data}
                 );

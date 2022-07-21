@@ -1,6 +1,6 @@
 <template>
   <div class="example">
-    <apexcharts  height="350" type="line" :options="apex.column.options" :series="apex.column.series" v-if="loaded"></apexcharts>
+    <apexcharts  height="350" type="bar" :options="apex.column.options" :series="apex.column.series" v-if="loaded"></apexcharts>
   </div>
 </template>
 
@@ -19,37 +19,46 @@ export default {
   },
   data: function() {
     return {
-      loaded : false,
+      loaded : true,
       apex: {
     column: {
       series: [{
-            data : []
+            data : [ 24928,
+    11568,
+    4612,
+    80]
       }],
       options: {
         chart: {
           height: 350,
-          type: 'line'
+          type: 'bar'
         },
-        colors: ['#0965dd'],
+
+
+        // colors: ["#FCCF31", "#17ead9", "#f02fc2"],
+        stroke: {
+          width: 3
+        },
+        // fill: {
+        //     type: "gradient",
+        //     gradient: {
+        //       // gradientToColors: ["#F55555", "#6078ea", "#6094ea"]
+        //     }
+        //   },
+
         plotOptions: {
-          line: {
+          bar: {
             columnWidth: '45%',
             distributed: true,
             horizontal: true,
 
           }
         },
-        fill: {
-            type: "gradient",
-            gradient: {
-              // gradientToColors: ["#F55555", "#6078ea", "#6094ea"]
-            }
-          },
         dataLabels: {
           enabled: false,
         },
         xaxis: {
-          categories: [1,2,3,4,5,6,7,8,9,10,11,12],
+          categories: ["Married", "Single", "Divorced", "unknown"],
           labels: {
             style: {
               colors: colors.chartTextColor,
@@ -83,16 +92,16 @@ export default {
         }
       }
     }}}},
-    async mounted(){
-          // console.log('before')
-          await axios
-                    .get('http://143.198.251.214/monthly_customer_purchase')
-                    .then(response => {
-                        this.apex.column.series[0]['data'] = response.data[2]}
-                    );
-          this.loaded = true;
-          // console.log('after')
-        } 
+    // async mounted(){
+    //       // console.log('before')
+    //       await axios
+    //                 .get('http://143.198.251.214/Marital_Customer')
+    //                 .then(response => {
+    //                     this.apex.column.series[0]['data'] = response.data}
+    //                 );
+    //       this.loaded = true;
+    //       // console.log('after')
+    //     } 
 
    
 }

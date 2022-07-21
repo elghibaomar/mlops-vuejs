@@ -103,16 +103,16 @@ export default {
 
     }
   },
-  async created(){
-     await axios
-                .get('http://143.198.251.214/Conversion_Age_Marital')
-                .then(response => {
-                    this.tableStyles[0]['divorced'] = response.data['divorced'];
-                    this.tableStyles[0]['married'] = response.data[0];
-                    this.tableStyles[0]['single'] = response.data[0];
-                    this.tableStyles[0]['unknown'] = response.data[0];
-}
-                );
-  },
+//   async created(){
+//      await axios
+//                 .get('http://143.198.251.214/Conversion_Age_Marital')
+//                 .then(response => {
+//                     this.tableStyles[0]['divorced'] = response.data['divorced'];
+//                     this.tableStyles[0]['married'] = response.data[0];
+//                     this.tableStyles[0]['single'] = response.data[0];
+//                     this.tableStyles[0]['unknown'] = response.data[0];
+// }
+//                 );
+//   },
 }
 </script>

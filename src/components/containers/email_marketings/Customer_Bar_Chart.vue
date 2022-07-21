@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="BarData"></canvas>
+    <canvas id="BarData1"></canvas>
 
 
   </div>
@@ -12,25 +12,54 @@ import Chart from 'chart.js'
 // import BarData from '../../data/BarData.js'
 
 export default {
-  name: 'Marital_Bar_Chart',
+  name: 'Customer_Bar_Chart',
   data() {
     return {
       // BarData: BarData,
       
       
-      BarData : {
+      BarData1 : {
           email_list : [],
           type: "bar",
           data: {
-            labels: ["Married", "Single", "Divorced", "unknown"],
+            labels: ['January','February','March','April','May','June','July','August','September','October','November','December'],
             
                         
             datasets: [
               {
-                label: "Customers Marital",
-                data: [],
-                backgroundColor: "#D79922",
-                borderColor: "#D6CE15",
+                label: "All Customer Purchase",
+                data: [347,
+        314,
+        345,
+        377,
+        401,
+        315,
+        364,
+        299,
+        329,
+        618,
+        471,
+        521],
+                backgroundColor: "#FCCF31",
+                borderColor: "#FCCF31",
+                borderWidth: 3
+              },
+              {
+                label: "Unique Customers Purchase",
+                data: [343,
+        714,
+        662,
+        471,
+        423,
+        413,
+        464,
+        398,
+        529,
+        717,
+        866,
+        716],
+                backgroundColor: "#17ead9",
+                borderColor: "#17ead9",
                 borderWidth: 3
               },
             ]
@@ -67,14 +96,15 @@ export default {
   },
     }
   },
-  async created(){
-     await axios
-                .get('http://143.198.251.214//Marital_Customer')
-                .then(response => {
-                    this.BarData.data.datasets[0]['data'] = response.data}
-                );
-                const ctx2 = document.getElementById('BarData');
-                new Chart(ctx2, this.BarData);
+  mounted(){
+    //  await axios
+    //             .get('http://143.198.251.214/monthly_customer_purchase')
+    //             .then(response => {
+    //                 this.BarData1.data.datasets[0]['data'] = response.data[0];
+    //                 this.BarData1.data.datasets[1]['data'] = response.data[1]}
+    //             );
+                const ctx2 = document.getElementById('BarData1');
+                new Chart(ctx2, this.BarData1);
   },
   // mounted() {
    
