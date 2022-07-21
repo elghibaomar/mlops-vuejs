@@ -33,37 +33,37 @@ export default {
       cities :   [{
                   latitude: 51.250351,
                   longitude: 6.690717,
-                  tooltip: 'Berlin'
+                  tooltip: 'Meerbusch, North Rhine-Westphalia, Germany'
                 },
                 {
                   latitude: 47.595661,
                   longitude: 11.072352,
                   size : 4,
-                  tooltip: 'Rabat - Sale - Kenitra',
+                  tooltip: 'Oberammergau, Bavaria, Germany',
                 },
                 {
                   latitude: 50.810001,
                   longitude: 8.770833,
                   size : 4,
-                  tooltip: 'Fes - Meknes',
+                  tooltip: 'Marburg, Hesse State, Germany',
                 },
                 {
                   latitude: 47.966923,
                   longitude: 11.184414,
                   size : 4,
-                  tooltip: 'Casablanca - Settat',
+                  tooltip: 'Andechs, Bavaria, Germany',
                 },
                 {
                   latitude: 48.653320,
                   longitude: 13.624967,
                   size : 4,
-                  tooltip: 'Marrakech - Safi',
+                  tooltip: 'Hauzenberg, Bavaria, Germany',
                 },
                 {
                   latitude: 48.798618,
                   longitude: 8.440026,
                   size : 4,
-                  tooltip: 'Oriental',
+                  tooltip: 'Bad Herrenalb, Germany',
                 },
                 // {
                 //   latitude: 27.1500,
