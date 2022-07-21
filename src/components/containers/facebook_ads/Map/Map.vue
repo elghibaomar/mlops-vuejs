@@ -31,52 +31,53 @@ export default {
     return {
       total_puchase : [],
       cities :   [{
-                  latitude: 35,
-                  longitude: -4.8340,
-                  tooltip: 'Tanger - Tetouan - Al Houceima'
+                  latitude: 51.250351,
+                  longitude: 6.690717,
+                  tooltip: 'Berlin'
                 },
                 {
-                  latitude: 34.0253,
-                  longitude: -6.8361,
+                  latitude: 47.595661,
+                  longitude: 11.072352,
                   size : 4,
                   tooltip: 'Rabat - Sale - Kenitra',
                 },
                 {
-                  latitude: 34.0433,
-                  longitude: -5.0033,
+                  latitude: 50.810001,
+                  longitude: 8.770833,
                   size : 4,
                   tooltip: 'Fes - Meknes',
                 },
                 {
-                  latitude: 33.5992,
-                  longitude: -7.6200,
+                  latitude: 47.966923,
+                  longitude: 11.184414,
                   size : 4,
                   tooltip: 'Casablanca - Settat',
                 },
                 {
-                  latitude: 31.6295,
-                  longitude: -7.9811,
+                  latitude: 48.653320,
+                  longitude: 13.624967,
                   size : 4,
                   tooltip: 'Marrakech - Safi',
                 },
                 {
-                  latitude: 34.6900,
-                  longitude: -1.9100,
+                  latitude: 48.798618,
+                  longitude: 8.440026,
                   size : 4,
                   tooltip: 'Oriental',
                 },
-                {
-                  latitude: 27.1500,
-                  longitude: -13.2000,
-                  size : 4,
-                  tooltip: 'Laayoune',
-                },
-                {
-                  latitude: 30.4167,
-                  longitude: -9.5833,
-                  size : 5,
-                  tooltip: 'Souss - Massa',
-                }],
+                // {
+                //   latitude: 27.1500,
+                //   longitude: -13.2000,
+                //   size : 4,
+                //   tooltip: 'Laayoune',
+                // },
+                // {
+                //   latitude: 30.4167,
+                //   longitude: -9.5833,
+                //   size : 5,
+                //   tooltip: 'Souss - Massa',
+                // }],
+                ],
 
       animateNumberOptions: {
         duration: 1000,
@@ -112,15 +113,13 @@ export default {
     //  await axios
     //             .get('http://127.0.0.1:3000/Countries_Purchase')
     //             .then(response => {
-    this.cities[0]['size'] = 163/50;
+    this.cities[0]['size'] = 1630/50;
     this.cities[1]['size'] = 565/50;
     this.cities[2]['size'] = 985/50;
     this.cities[3]['size'] = 439/50;
     this.cities[4]['size'] = 697/50;
-    this.cities[5]['size'] = 76/50;
-    this.cities[6]['size'] = 818/50;
-    this.cities[7]['size'] = 851/50;
-    this.total_puchase = 4640 - 1000
+    this.cities[5]['size'] = 760/50;
+    this.total_puchase = 13500 - 1000
                     
                 // );
     let map = am4core.create(this.$refs.map, am4maps.MapChart);

@@ -3,31 +3,18 @@
             
 
                     <b-form @submit="onSubmit"  v-if="show">
-                    <b-form-group 
-                        id="input-group-1"
-                        label="Email address:"
-                        label-for="input-1"
-                        description="We'll never share your email with anyone else."
-                    >
-                        <b-form-input style="background-color:#040620; border:#040620;"
-                        id="input-1"
-                        v-model="form.email"
-                        type="email"
-                        placeholder="Enter email"
-                        required
-                        ></b-form-input>
-                    </b-form-group>
+                    
 
-                    <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+                    <b-form-group id="input-group-2" label="Your Task:" label-for="input-2">
                         <b-form-input style="background-color:#040620; border:#040620;"
                         id="input-2"
                         v-model="form.name"
-                        placeholder="Enter name"
+                        placeholder="Enter Task"
                         required
                         ></b-form-input>
                     </b-form-group>
 
-                    <b-form-group id="input-group-3" label="Food:" label-for="input-3">
+                    <b-form-group id="input-group-3" label="Name" label-for="input-3">
                         <b-form-select style="background-color:#040620; border:#040620;"
                         id="input-3"
                         v-model="form.food"
@@ -55,7 +42,7 @@
           food: null,
           checked: []
         },
-        foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
+        foods: [{ text: 'Select One', value: null }, 'Omar El Ghiba'],
         show: true
       }
     },

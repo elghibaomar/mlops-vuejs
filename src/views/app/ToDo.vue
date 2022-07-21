@@ -16,7 +16,7 @@
                 <b-col lg= "5">
           
                   <Widget
-                      title="<h6> Testing </h6>"
+                      title="<h6> Add Your Task </h6>"
                        customHeader
                     >   
                     <Created/>
@@ -28,7 +28,7 @@
                <b-col lg= "5">
 
                     <Widget
-                      title="<h6> Done </h6>"
+                      title="<h6> Tasks </h6>"
                        customHeader
                     >   
                     <Testing/>

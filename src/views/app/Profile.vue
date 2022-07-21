@@ -26,7 +26,7 @@
                 <b-col cols="6" lg = "5">
           
                 <Widget
-                      title="<h6> TRAFFIC VALUES </h6>"
+                      title="<h6> </h6>"
                        customHeader
                     >
                      <ProfileForm/>

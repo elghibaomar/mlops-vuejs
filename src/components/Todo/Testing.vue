@@ -8,9 +8,9 @@
                   <i class="status status-bottom bg-primary" />
                 </span>
                 <div>
-                  <h6 class="m-0">Chris Gray</h6>
+                  <h6 class="m-0">Omar El Ghiba</h6>
                   <p class="help-block text-ellipsis m-0">
-                    Hey! What&apos;s up? So many times since we
+                    Update Django Api Customer Purchase
                   </p>
                 </div>
               </a>
@@ -20,8 +20,8 @@
                   <i class="status status-bottom bg-primary" />
                 </span>
                 <div>
-                  <h6 class="m-0">Livia Walsh</h6>
-                  <p class="help-block text-ellipsis m-0">Check my latest email plz!</p>
+                  <h6 class="m-0">Omar El Ghiba</h6>
+                  <p class="help-block text-ellipsis m-0">Error Fast Api Aws Lambda</p>
                 </div>
               </a>
               <a class="list-group-item" href="#">
@@ -30,8 +30,8 @@
                   <i class="status status-bottom bg-primary" />
                 </span>
                 <div>
-                  <h6 class="m-0">Jaron Fitzroy</h6>
-                  <p class="help-block text-ellipsis m-0">What about summer break?</p>
+                  <h6 class="m-0">Omar El Ghiba</h6>
+                  <p class="help-block text-ellipsis m-0">Check Kubernetes Logs</p>
                 </div>
               </a>
             </div>
