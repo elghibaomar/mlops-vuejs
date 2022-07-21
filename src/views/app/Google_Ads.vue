@@ -22,7 +22,7 @@
                         customHeader
                     >
                     
-                     <index/>
+                     <Error/>
                     </widget>
            
            
@@ -43,7 +43,7 @@
 
 <script>
 
-import index from '@/components/containers/google_ads/index.vue';
+import Error from '@/components/containers/google_ads/Error.vue';
 import Widget from '@/components/Widget/Widget';
 import Map from '@/components/Map/Map';
 
@@ -61,7 +61,7 @@ export default {
   components: {
 
 
-    index,
+    Error,
     Widget,
 
   },
