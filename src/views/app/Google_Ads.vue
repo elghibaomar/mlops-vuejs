@@ -42,17 +42,16 @@
 </template>
 
 <script>
-// @ is an alias to /src
 
 import index from '@/components/containers/google_ads/index.vue';
 import Widget from '@/components/Widget/Widget';
 import Map from '@/components/Map/Map';
 
 
-import store from '../../store'
+// import store from '../../store'
 
-console.log(store.state.token)
-console.log(store.state.isAuthenticated)
+// console.log(store.state.token)
+// console.log(store.state.isAuthenticated)
 
 export default {
   name: 'HomeView',
