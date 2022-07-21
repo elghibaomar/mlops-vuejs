@@ -14,6 +14,7 @@ import Upload from '../views/app/Upload.vue'
 import Login from '../views/Error/Login';
 import ErrorPage from '../views/Error/Error';
 import Layout from '@/components/Layout/Layout';
+import welcome from '../views/welcome/welcome.vue'
 
 // Vue.use(VueRouter)
 
@@ -42,7 +43,7 @@ export default new Router({
     {
       path: '',
       name: '',
-      component: Profile,
+      component: welcome,
     },
     
     {

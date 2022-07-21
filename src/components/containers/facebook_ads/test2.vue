@@ -24,15 +24,15 @@ export default {
     column: {
       series: [{
             data : [1.1527377521613833,
-        0.0,
+        0.33,
         0.27548209366391185,
         1.0666666666666667,
-        0.30864197530864196,
-        0.6349206349206349,
-        0.0,
+        0.80864197530864196,
+        0.9349206349206349,
+        0.45,
         0.33444816053511706,
-        0.0,
-        0.3144654088050315,
+        0.12,
+        0.9344654088050315,
         0.7451564828614009,
         0.8051529790660225]
       }],
@@ -41,7 +41,7 @@ export default {
           height: 350,
           type: 'line'
         },
-        colors: ['#0965dd'],
+        colors: ['#eb34b4'],
         plotOptions: {
           line: {
             columnWidth: '45%',
@@ -50,12 +50,12 @@ export default {
 
           }
         },
-        fill: {
-            type: "gradient",
-            gradient: {
-              // gradientToColors: ["#F55555", "#6078ea", "#6094ea"]
-            }
-          },
+        // fill: {
+        //     type: "gradient",
+        //     gradient: {
+        //       // gradientToColors: ["#F55555", "#6078ea", "#6094ea"]
+        //     }
+        //   },
         dataLabels: {
           enabled: false,
         },

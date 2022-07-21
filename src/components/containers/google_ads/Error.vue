@@ -2,10 +2,8 @@
   <div class="error-page">
     <b-container>
       <div class="errorContainer mx-auto">
-        <h1 class="errorCode">No Data</h1>
-        <p class="errorInfo">
-            Please Send Data
-        </p>
+        <h1>No Data</h1>
+
         
       </div>
       <!-- <footer class="pageFooter">

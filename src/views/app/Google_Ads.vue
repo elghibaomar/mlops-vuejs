@@ -14,7 +14,7 @@
 
              <b-row>
 
-          <b-col lg="6">
+          <b-col>
          
             
                 <Widget
