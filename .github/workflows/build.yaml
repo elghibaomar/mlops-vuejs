@@ -24,11 +24,19 @@ jobs:
 
 
       - name: Build the Docker image
-        run: docker build -f Dockerfile \
-            -t elghibaomar/vuejs-k8s-web-final:latest \
-            -t elghibaomar/vuejs-k8s-web-final:latest:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
-            .
-
+        # working-directory: .
+        run: |
+          docker build -f Dockerfile \
+              -t elghibaomar/vuejs-k8s-web-final:latest \
+              -t elghibaomar/vuejs-k8s-web-final:latest:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
+              .
+# - name: Build container image
+#         working-directory: ./web
+#         run: |
+#           docker build -f Dockerfile \
+#             -t registry.digitalocean.com/om-k8s/django-k8s-web:latest \
+#             -t registry.digitalocean.com/om-k8s/django-k8s-web:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
+#             .
 
           
       
