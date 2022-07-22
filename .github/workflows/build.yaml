@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CLUSTER_NAME: vuejs-k8s
+      CLUSTER_NAME: django-k8s
     steps:
       - uses: actions/checkout@v2
       - name: Insall doctl
@@ -50,9 +50,9 @@ jobs:
       - name: Docker Push
         run: docker push elghibaomar/vuejs-k8s-web-final --all-tags
 
-      # - name: K8s cluster kubeconfig file with/ short-lived creds
-      #   run: |
-      #     doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ env.CLUSTER_NAME }}
+      - name: K8s cluster kubeconfig file with/ short-lived creds
+        run: |
+          doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ env.CLUSTER_NAME }}
 
       - name: Update Deployment image
         run: |
