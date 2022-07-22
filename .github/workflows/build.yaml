@@ -21,12 +21,26 @@ jobs:
           DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
         run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
+
+
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag elghibaomar/vuejs-k8s-web-final:latest
+        run: docker build . --file Dockerfile \
+            -t elghibaomar/vuejs-k8s-web-final:latest \
+            -t elghibaomar/vuejs-k8s-web-final:latest:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
+
+
           
       
       - name: Docker Push
-        run: docker push elghibaomar/vuejs-k8s-web-final:latest
+        run: docker push elghibaomar/vuejs-k8s-web-final --all-tags
+
+      - name: Update Deployment image
+        run: |
+          kubectl set image deployment/vuejs-k8s-web-final-deployment vuejs-k8s-web-final=elghibaomar/vuejs-k8s-web-final:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
+
+      - name: Wait for rollout to finish
+        run: |
+          kubectl rollout status deployment/vuejs-k8s-web-final-deployment
 
 
 

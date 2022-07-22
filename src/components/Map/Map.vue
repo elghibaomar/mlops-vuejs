@@ -106,23 +106,23 @@ export default {
   // },
 
 
-// ss
 
-  mounted() {
-    //  await axios
-    //             .get('http://127.0.0.1:3000/Countries_Purchase')
-    //             .then(response => {
-    this.cities[0]['size'] = 163/50;
-    this.cities[1]['size'] = 565/50;
-    this.cities[2]['size'] = 985/50;
-    this.cities[3]['size'] = 439/50;
-    this.cities[4]['size'] = 697/50;
-    this.cities[5]['size'] = 76/50;
-    this.cities[6]['size'] = 818/50;
-    this.cities[7]['size'] = 851/50;
-    this.total_puchase = 4640 - 1000
+
+  async mounted() {
+     await axios
+                .get('http://143.198.251.214/Countries_Purchase')
+                .then(response => {
+                    this.cities[0]['size'] = response.data[0][1]/50;
+                    this.cities[1]['size'] = response.data[0][2]/50;
+                    this.cities[2]['size'] = response.data[0][3]/50;
+                    this.cities[3]['size'] = response.data[0][4]/50;
+                    this.cities[4]['size'] = response.data[0][5]/50;
+                    this.cities[5]['size'] = response.data[0][6]/50;
+                    this.cities[6]['size'] = response.data[0][7]/50;
+                    this.cities[7]['size'] = response.data[0][8]/50;
+                    this.total_puchase = response.data[1] - 1000}
                     
-                // );
+                );
     let map = am4core.create(this.$refs.map, am4maps.MapChart);
     map.geodata = am4geodata_moroccoHigh;
     map.projection = new am4maps.projections.NaturalEarth1();
