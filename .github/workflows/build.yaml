@@ -27,6 +27,7 @@ jobs:
         run: docker build -f Dockerfile \
             -t elghibaomar/vuejs-k8s-web-final:latest \
             -t elghibaomar/vuejs-k8s-web-final:latest:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
+            .
 
 
           
