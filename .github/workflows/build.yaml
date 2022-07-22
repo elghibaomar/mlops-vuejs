@@ -15,6 +15,10 @@ jobs:
       CLUSTER_NAME: vuejs-k8s
     steps:
       - uses: actions/checkout@v2
+      - name: Insall doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DO_API_TOKEN_KEY }}
       - name: docker login
         env:
           DOCKER_USER: ${{secrets.DOCKER_USER}}
