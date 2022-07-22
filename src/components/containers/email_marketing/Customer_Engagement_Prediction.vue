@@ -124,8 +124,8 @@
                         <h6 class="name">Predcition</h6>
                         <p style="color:#fff;" class="value">{{score}}</p>
                     </div>
-                    <img v-if="score == 1" src="http://localhost:8080/yes.png"  width="40" height="40">
-                     <img v-if="score == 0" src="http://localhost:8080/no.png"  width="40" height="40"></img>
+                    <img v-if="score == 1" src="../../../assets/pic/yes.png"  width="40" height="40">
+                     <img v-if="score == 0" src="../../../assets/pic/no.png"  width="40" height="40">
           </div>
 
 
